@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>solar system</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        overflow: hidden;
+      }
+       .container {
+        font-size: 10px;
+        width: 40em;
+        height: 40em;
+        position: relative;
+
+      }
+      .sun {
+        position: absolute;
+        top: 15em;
+        left: 15em;
+        width: 6em;
+        height: 6em;
+        background-color: gold;
+        border-radius: 50%;
+        box-shadow: 0 0 3em white;
+
+      }
+      .mercury,.venus,.earth,.moon,.mars,.jupiter,.satrun,.rhea,.mimas,.enceladus,.titan {
+        position: absolute;
+        border-style:solid;
+        border-color: white;
+        transparent
+        transparent
+        transparent
+        transparent
+        transparent
+        transparent
+        transparent
+        transparent
+        transparent
+        transparent;
+        border-width: 0em 0em  ;
+        border-radius: 50%;
+
+      }
+      .mercury {
+        top: 14em;
+        left: 14em;
+        width: 10em;
+        height: 10em;
+        animation: orbit 2s linear infinite;
+      }
+      .venus {
+        top: 10em;
+        left: 10em;
+        width: 20em;
+        height: 20em;
+        animation: orbit 4s linear infinite;
+      }
+      .earth {
+        top: 5em;
+        left: 5em;
+        width: 30em;
+        height: 30em;
+        animation: orbit 36.5s linear infinite;
+
+      }
+      .moon {
+        top: 0;
+        right: 0;
+        width: 8em;
+        height: 8em;
+        animation: orbit 2.7s linear infinite;
+
+      }
+      .mars {
+        top: -6em;
+        left: -6em;
+        width: 45em;
+        height: 45em;
+        animation: orbit 40s linear infinite;
+      }
+      .jupiter {
+        top: -12em;
+        left: -12em;
+        width: 65em;
+        height: 65em;
+        animation: orbit 60s linear infinite;
+      }
+      .satrun {
+        top: -30em;
+        left: -30em;
+        width: 100em;
+        height: 100em;
+        animation: orbit 65s linear infinite;
+      }
+      .rhea {
+        top: 0;
+        right: 0;
+        width: 20.5em;
+        height: 20.5em;
+        animation: orbit 0.5s linear infinite;
+
+      }
+      .mimas {
+        top: 0;
+        right: 0;
+        width: 21.5em;
+        height: 21.5em;
+        animation: orbit 0.7s linear infinite;
+
+      }
+      .enceladus {
+        top: 0;
+        right: 0;
+        width: 22em;
+        height: 22em;
+        animation: orbit 1s linear infinite;
+
+      }
+      .titan {
+        top: 0;
+        right: 0;
+        width: 23em;
+        height: 23em;
+        animation: orbit 1.2s linear infinite;
+
+      }
+      .mercury::before,
+      .venus::before,
+      .earth::before,
+      .moon::before,
+      .mars::before,
+      .jupiter::before,
+      .satrun::before,
+      .rhea::before,
+      .mimas::before,
+      .enceladus::before,
+      .titan::before {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+
+      }
+      .mercury::before {
+        top: 0.9em;
+        left: 0.9em;
+        width: 1em;
+        height: 1em;
+        background-color: antiquewhite;
+      }
+      .venus::before {
+        top: 2em;
+        left: 2em;
+        width: 2em;
+        height: 2em;
+        background-color: bisque;
+      }
+      .earth::before {
+        top: 2.8em;
+        right: 2.8em;
+        width: 3em;
+        height: 3em;
+        background-color: aqua;
+      }
+      .moon::before {
+        top: 0.8em;
+        right: 0.2em;
+        width: 1.2em;
+        height: 1.2em;
+        background-color: silver;
+      }
+      .mars::before {
+        top: 5em;
+        right: 5em;
+        width: 2.7em;
+        height: 2.7em;
+        background-color: orange;
+      }
+      .jupiter::before {
+        top: 7.5em;
+        right: 8em;
+        width: 3.9em;
+        height: 3.9em;
+        background-color: rgb(185, 155, 100);
+      }
+      .satrun::before {
+        top: 12.5em;
+        right: 12.5em;
+        width: 3.9em;
+        height: 3.9em;
+        background-color: rgb(245, 194, 99);
+      }
+      .rhea::before{
+        top: 0.1em;
+        right: 0.2em;
+        width: 1.2em;
+        height: 1.2em;
+        background-color: rgb(245, 6, 6);
+      }
+      .mimas::before {
+        top: 0.8em;
+        right: 0.2em;
+        width: 1.2em;
+        height: 1.2em;
+        background-color: rgb(70, 9, 240);
+      }
+      .enceladus::before {
+        top: 0.8em;
+        right: 0.2em;
+        width: 1.2em;
+        height: 1.2em;
+        background-color: rgb(6, 233, 63);;
+      }
+      .titan::before {
+        top: 0.8em;
+        right: 0.2em;
+        width: 1.2em;
+        height: 1.2em;
+        background-color: silver;
+      }
+      @keyframes orbit {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sun"></div>
+      <div class="mercury"></div>
+      <div class="venus"></div>
+      <div class="earth">
+        <div class="moon"></div>
+        <div class="mars"></div>
+        <div class="jupiter"></div>
+        <div class="satrun">
+          <div class="rhea"></div>
+          <div class="mimas"></div>
+          <div class="enceladus"></div>
+          <div class="titan"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
